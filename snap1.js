@@ -1,9 +1,9 @@
-let c = "Snap";
-let i = "Crackle";
-let x = "SnapCrackle";
-let maxValue = 20;
-let contador = 1;
-let vazio = [];
+let c = "Snap"
+let i = "Crackle"
+let x = "SnapCrackle"
+let maxValue = 20
+let contador = 1
+let vazio = []
 function snapCrackle() {
   for (contador = 1; contador <= maxValue;){
     if (contador % 5 === 0 && contador % 2 !== 0) {
@@ -11,12 +11,13 @@ function snapCrackle() {
     } else if (contador % 5 === 0) {
       vazio.push(i);
     } else if (contador % 5 === 0 || contador % 2 !== 1) {
-      vazio.push(contador);
+      vazio.push(contador)
     } else if (contador % 2 !== 0) {
-      vazio.push(c);
+      vazio.push(c)
     }
-    contador++;
+    contador++
   }
-  return vazio 
+  let resultado = vazio.toString()
+  console.log(typeof resultado)
+  return resultado
 }
-console.log(snapCrackle().join());
